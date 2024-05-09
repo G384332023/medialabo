@@ -1,0 +1,10 @@
+h1{
+    font-family: cursive;
+    color:#ffcc01;
+    background: linear-gradient(aqua, white);
+    text-shadow:white;
+}
+h2{
+    font-family:cursive;
+    color:aquamarine;
+}
