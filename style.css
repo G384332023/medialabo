@@ -1,10 +1,47 @@
 h1{
     font-family: cursive;
     color:#ffcc01;
-    background: linear-gradient(aqua, white);
+    background: linear-gradient(white, aqua);
     text-shadow:white;
 }
 h2{
     font-family:cursive;
-    color:aquamarine;
+    color:black;
+    background: linear-gradient(white, #ffcc01);
 }
+.第1回{
+    color:red;
+    background: linear-gradient(white, orange);
+    width:24%;
+}
+.第2回{
+    color:red;
+    background: linear-gradient(white, orange);
+    width:38%;
+}
+.第3回{
+    color:red;
+    background: linear-gradient(white, orange);
+    width:27%;
+}
+.第4回{
+    color:red;
+    background: linear-gradient(white, orange);
+    width:28%;
+}
+.第5回{
+    color:red;
+    background: linear-gradient(white, orange);
+    width:165px;
+}
+a:link {
+    color: pink;
+}
+  
+a:visited {
+    color: green;
+}
+a:hover {
+    background-color: aqua;
+}
+
