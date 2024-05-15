@@ -2,7 +2,7 @@ h1{
     font-family: cursive;
     color:#ffcc01;
     background: linear-gradient(white, aqua);
-    text-shadow:white;
+    text-shadow:white 1px 0 10px;
 }
 h2{
     font-family:cursive;

@@ -1,0 +1,21 @@
+body{
+    background-color: orange;
+}
+h1{
+    text-shadow: purple1px 0 10px;
+    ;
+}
+.検索結果{
+    text-decoration:underline;
+    text-decoration-color: black;
+    font-weight: bold;
+}
+.検索結果1{
+    text-stroke;
+}
+
+ul ul li{
+    background-color:black;
+    color:white;
+    width:700px;
+}
