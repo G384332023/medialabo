@@ -42,4 +42,9 @@ for(i of r){
 }
 
 // 練習4-5 箇条書き追加プログラム
-
+for(let y of data){
+	let xau=document.querySelector('ul#location');
+	let li=document.createElement('li');
+	li.textContent=(y.name+'...'+'緯度：'+y.lat+',経度'+y.lng);
+	xau.insertAdjacentElement('afterend',li);
+}
