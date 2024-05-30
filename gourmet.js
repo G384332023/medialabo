@@ -200,13 +200,43 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを
-console.log(data.access);
-console.log(data.address);
-console.log(data.budget.name);
-console.log(data.catch);
-console.log(data.genre.name);
-console.log(data.name);
-console.log(data.open);
-console.log(data.station_name);
-console.log(data.genre.name);
+console.log(data.results.shop[0].access);
+console.log(data.results.shop[0].address);
+console.log(data.results.shop[0].budget.name);
+console.log(data.results.shop[0].catch);
+console.log(data.results.shop[0].genre.name);
+console.log(data.results.shop[0].name);
+console.log(data.results.shop[0].open);
+console.log(data.results.shop[0].station_name);
+console.log(data.results.shop[0].genre.name);
+
+let b=document.querySelector('#sendRequest');
+b.addEventListener('click',sendRequest);
+
+function sendRequest(){
+  let url='https://www.nishita-lab.org/web-contents/jsons/hotpepper/'+key+'.json'
+  
+  axios.get(url).then(showResult).catch(showError).then(finish);
+}
+
+function showResult(resp) {
+  let data = resp.data;
+
+  if (typeof data === 'string') {
+      data = JSON.parse(data);
+  }
+
+  console.log(data);
+
+  console.log(data.x);
+}
+
+function showError(err) {
+  console.log(err);
+}
+
+function finish() {
+  console.log('Ajax 通信が終わりました');
+}
+
 
