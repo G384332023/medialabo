@@ -199,8 +199,14 @@ let data = {
   }
 };
 
-/////////// 課題3-2 ここからプログラムを書こう
-for(let n of data){
-  console.log(n);
-}
+/////////// 課題3-2 ここからプログラムを
+console.log(data.access);
+console.log(data.address);
+console.log(data.budget.name);
+console.log(data.catch);
+console.log(data.genre.name);
+console.log(data.name);
+console.log(data.open);
+console.log(data.station_name);
+console.log(data.genre.name);
 
