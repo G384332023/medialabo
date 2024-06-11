@@ -210,6 +210,13 @@ console.log(data.results.shop[0].open);
 console.log(data.results.shop[0].station_name);
 console.log(data.results.shop[0].genre.name);
 
+
+let a=document.querySelector('#result');
+let li=document.createElement('li');
+li.textContent=(data.results.shop[0].access);
+a.insertAdjacentElement('afterend',li);
+
+
 let b=document.querySelector('#sendRequest');
 b.addEventListener('click',sendRequest);
 
