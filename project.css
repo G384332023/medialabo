@@ -1,21 +1,26 @@
 body{
-    background-color: orange;
+    background-color:aquamarine;
 }
 h1{
+    text-align: center;
     text-shadow: purple1px 0 10px;
-    ;
+    background-color:#00ffff
+    
 }
-.検索結果{
+div{
     text-decoration:underline;
     text-decoration-color: black;
     font-weight: bold;
 }
-.検索結果1{
-    text-stroke: black;
+.sendRequest{
+    text-align:right;
 }
 
-ul ul li{
-    background-color:black;
-    color:white;
-    width:700px;
+
+
+img.shashin {
+    
+	width: 100px;
+    height: 100px;
+    margin: 10px 0 10px 10px;
 }

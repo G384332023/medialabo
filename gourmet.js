@@ -200,31 +200,107 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを
-console.log(data.results.shop[0].access);
-console.log(data.results.shop[0].address);
-console.log(data.results.shop[0].budget.name);
-console.log(data.results.shop[0].catch);
-console.log(data.results.shop[0].genre.name);
-console.log(data.results.shop[0].name);
-console.log(data.results.shop[0].open);
-console.log(data.results.shop[0].station_name);
-console.log(data.results.shop[0].genre.name);
+console.log("名前："+data.results.shop[0].name);
+console.log("アクセス情報："+data.results.shop[0].access);
+console.log("住所："+data.results.shop[0].address);
+console.log("予算："+data.results.shop[0].budget.name);
+console.log("キャッチコピー："+data.results.shop[0].catch);
+console.log("ジャンル："+data.results.shop[0].genre.name);
+console.log("店舗名："+data.results.shop[0].name);
+console.log("営業日時："+data.results.shop[0].open);
+console.log("最寄駅："+data.results.shop[0].station_name);
+console.log("サブジャンルの名前："+data.results.shop[0].genre.name);
+console.log("名前："+data.results.shop[1].name);
+console.log("アクセス情報："+data.results.shop[1].access);
+console.log("住所："+data.results.shop[1].address);
+console.log("予算："+data.results.shop[1].budget.name);
+console.log("キャッチコピー："+data.results.shop[1].catch);
+console.log("ジャンル："+data.results.shop[1].genre.name);
+console.log("店舗名："+data.results.shop[1].name);
+console.log("営業日時："+data.results.shop[1].open);
+console.log("最寄駅："+data.results.shop[1].station_name);
+console.log("サブジャンルの名前："+data.results.shop[1].genre.name);
+/*
+let x=document.querySelector('#result');
+let y=document.createElement('h1');
+y.textContent=("グルメ情報（検索結果は2件です）");
+x.insertAdjacentElement('beforeend',y);
 
+let x1=document.querySelector('#result');
+let y1=document.createElement('h2');
+y1.textContent=("検索結果１");
+x1.insertAdjacentElement('beforeend',y1);
 
-let a=document.querySelector('#result');
-let li=document.createElement('li');
-li.textContent=(data.results.shop[0].access);
-a.insertAdjacentElement('afterend',li);
+let z=document.querySelector('#result');
+let w=document.createElement('ul');
+z.insertAdjacentElement('beforeend',w);
 
+let a=document.querySelector('ul');
+let d=document.createElement('li');
+d.textContent=("名前："+data.results.shop[0].name);
+a.insertAdjacentElement('beforeend',d);
 
-let b=document.querySelector('#sendRequest');
-b.addEventListener('click',sendRequest);
+let a1=document.querySelector('ul');
+let dn=document.createElement('li');
+dn.textContent=("アクセス情報："+data.results.shop[0].access);
+a1.insertAdjacentElement('beforeend',dn);
+
+let a2=document.querySelector('ul');
+let dx=document.createElement('li');
+dx.textContent=("住所："+data.results.shop[0].address);
+a2.insertAdjacentElement('beforeend',dx);
+
+let a3=document.querySelector('ul');
+let dy=document.createElement('li');
+dy.textContent=("予算："+data.results.shop[0].budget.name);
+a3.insertAdjacentElement('beforeend',dy);
+
+let a4=document.querySelector('ul');
+let dz=document.createElement('li');
+dz.textContent=("キャッチコピー："+data.results.shop[0].catch);
+a4.insertAdjacentElement('beforeend',dz);
+
+let a5=document.querySelector('ul');
+let dw=document.createElement('li');
+dw.textContent=("ジャンル"+data.results.shop[0].genre.name);
+a5.insertAdjacentElement('beforeend',dw);
+
+let a6=document.querySelector('ul');
+let da=document.createElement('li');
+da.textContent=("営業日時："+data.results.shop[0].open);
+a6.insertAdjacentElement('beforeend',da);
+
+let a7=document.querySelector('ul');
+let db=document.createElement('li');
+db.textContent=("最寄駅："+data.results.shop[0].station_name);
+a7.insertAdjacentElement('beforeend',db);
+
+let a8=document.querySelector('ul');
+let dc=document.createElement('li');
+dc.textContent=("最寄駅："+data.results.shop[0].sub_genre.name);
+a8.insertAdjacentElement('beforeend',dc);
+*/
+let pd1 = document.querySelector('#sendRequest');
+  pd1.addEventListener('click',sendRequest);
+
 
 function sendRequest(){
+  let c1=document.querySelector('select#mise');
+  let c3=c1.querySelectorAll('option');
+  let c4=c3.item(n);
+  let key=c4.value
   let url='https://www.nishita-lab.org/web-contents/jsons/hotpepper/'+key+'.json'
-  
+  console.log(url);
+
   axios.get(url).then(showResult).catch(showError).then(finish);
+
+  axios.get(url)
+    .then(showResult)
+    .catch(showError)
+    .then(finish)
 }
+
+
 
 function showResult(resp) {
   let data = resp.data;
@@ -232,10 +308,9 @@ function showResult(resp) {
   if (typeof data === 'string') {
       data = JSON.parse(data);
   }
+  consolw.log(data);
 
-  console.log(data);
 
-  console.log(data.x);
 }
 
 function showError(err) {
