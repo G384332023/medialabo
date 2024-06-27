@@ -28,7 +28,7 @@ function hantei() {
     if(1<n){
       f.textContent=('答えは'+kotae+'でした.すでにゲームは終わっています');
     }
-    else if(kaisu===4){
+    else if(kaisu===3){
       if(kotae===yoso){
         f.textContent=('正解です.おめでとう！');
       }
