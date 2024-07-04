@@ -25,21 +25,23 @@ function hantei() {
     let d=document.querySelector('span#answer');
     d.textContent=(yoso);
     let f=document.querySelector('p#result');
-    if(1<n){
+    if(1<n || kaisu>=4){
       f.textContent=('答えは'+kotae+'でした.すでにゲームは終わっています');
     }
     else if(kaisu===3){
       if(kotae===yoso){
         f.textContent=('正解です.おめでとう！');
+        n=n+1;
       }
       else{
         f.textContent=('まちがい.残念でした答えは'+kotae+'です');
+        n=n+1;
       }
     }
     else{
       if(kotae===yoso){
         f.textContent=('正解です.おめでとう！');
-        n=n+4;
+        n=n+3;
       }
       else{
         if(kotae<yoso){
